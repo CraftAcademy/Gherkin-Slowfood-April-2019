@@ -1,8 +1,7 @@
-%h1 Gherkin Burgers
+%h1= @category.name
 
 - @products.each do |product|
 	%h2= product.name
 	%p= product.description
 	%p #{product.price} kr
-
 

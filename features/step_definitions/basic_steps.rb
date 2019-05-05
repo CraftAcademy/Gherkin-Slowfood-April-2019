@@ -1,9 +1,11 @@
-Given("the following products exist") do |table|
-  table.hashes.each do |product|
-    FactoryBot.create(:product, product)
-  end 
-end
-  
-When("I visit the landing page") do
+When('I visit the landing page') do
   visit root_path
+end
+
+When ('I click {string} link') do |string|
+  click_link string
+end
+
+Then("stop") do
+  binding.pry
 end
